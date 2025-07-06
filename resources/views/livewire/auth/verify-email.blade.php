@@ -6,7 +6,7 @@
 
     layout('components.layouts.auth');
 
-    title('Verify Email');
+    title('Xác thực email');
 
     mount(fn() => $this->checkVerification());
 
@@ -29,7 +29,7 @@
 
 <div>
     <x-card
-        :title="__('Xác thực Email')"
+        :title="__('Xác thực email')"
         :subtitle="__('Hãy xác thực email bằng cách ấn vào link chúng tôi đã gửi.')"
         shadow
         class="rounded-xl border bg-white dark:bg-stone-950 dark:border-stone-800 shadow-xs"
