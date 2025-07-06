@@ -8,15 +8,17 @@
 
     title('Verify Email');
 
-    mount(function () {
-        if (Auth::user()->hasVerifiedEmail()) {
-            $this->redirectIntended(default: route('admin.dashboard', absolute: false), navigate: true);
-        }
-    });
+    mount(fn() => $this->checkVerification());
 
     $sendVerification = function () {
         Auth::user()->sendEmailVerificationNotification();
         Session::flash('status', 'verification-link-sent');
+    };
+
+    $checkVerification = function () {
+        if (Auth::user()->hasVerifiedEmail()) {
+            $this->redirectIntended(default: route('admin.dashboard', absolute: false), navigate: true);
+        }
     };
 
     $logout = function () {
@@ -61,4 +63,6 @@
             </div>
         @endif
     </x-card>
+
+    <div wire:poll.5s="checkVerification"></div>
 </div>
