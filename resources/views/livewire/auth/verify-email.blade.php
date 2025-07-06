@@ -64,5 +64,5 @@
         @endif
     </x-card>
 
-    <div wire:poll.5s="checkVerification"></div>
+    <div wire:poll.60s="checkVerification"></div>
 </div>
