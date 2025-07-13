@@ -17,7 +17,7 @@
 
 /** daisyUI */
 @plugin "daisyui" {
-    themes: light --default, dark --prefersdark;
+    themes: light --default, black --prefersdark;
 }
 
 /* maryUI */

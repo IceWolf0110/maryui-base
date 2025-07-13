@@ -72,7 +72,6 @@
                 placeholder="email@example.com"
                 clearable="true"
                 required="true"
-                class="bg-white dark:bg-black"
             />
         </div>
 
@@ -83,12 +82,11 @@
                 placeholder="Nhập mật khẩu"
                 clearable="true"
                 required="true"
-                class="bg-white dark:bg-black"
             />
         </div>
 
         <div class="flex justify-between items-center text-center mb-4">
-            <x-checkbox label="Remember me" wire:model="remember" />
+            <x-checkbox label="Remember me" wire:model="remember" class="rounded-md"/>
             @if (Route::has('auth.password.request'))
                 <a class="text-sm underline" href="{{ route('auth.password.request') }}" wire:navigate>
                     {{ __('Quên mật khẩu') }}

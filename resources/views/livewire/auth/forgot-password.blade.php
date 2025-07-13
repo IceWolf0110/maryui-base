@@ -34,7 +34,6 @@
                 placeholder="email@example.com"
                 clearable="true"
                 required="true"
-                class="bg-white dark:bg-black"
             />
         </div>
 

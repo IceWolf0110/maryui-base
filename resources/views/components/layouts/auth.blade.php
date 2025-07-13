@@ -8,7 +8,7 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="min-h-screen antialiased bg-neutral-100 dark:bg-black flex justify-center items-center">
+<body class="min-h-screen antialiased flex justify-center items-center">
 
     {{-- The main content with `full-width` --}}
     <x-main>

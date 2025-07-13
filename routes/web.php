@@ -28,6 +28,19 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Volt::route('admin/dashboard', 'admin.dashboard')
-        ->name('admin.dashboard');
+    Route::prefix('admin')->group(function () {
+        Volt::route('dashboard', 'admin.dashboard')
+            ->name('admin.dashboard');
+
+        Route::prefix('users')->group(function () {
+            Volt::route('/', 'admin.user.index')
+                ->name("admin.user.index");
+        });
+
+        Route::prefix('users')->group(function () {
+            Volt::route('{id}', 'admin.user.user')
+                ->where('id', '\d+')
+                ->name("admin.user.user");
+        });
+    });
 });

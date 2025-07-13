@@ -1,11 +1,13 @@
 <?php
-use function Livewire\Volt\{state, layout};
+    use function Livewire\Volt\{state, layout};
 
-$logout = function () {
-    logout();
+    layout('components.layouts.admin');
 
-    $this->redirectIntended(default: route('welcome', absolute: false), navigate: true);
-}
+    $logout = function () {
+        logout();
+
+        $this->redirectIntended(default: route('welcome', absolute: false), navigate: true);
+    }
 ?>
 
 <div>

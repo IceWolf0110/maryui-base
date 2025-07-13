@@ -17,7 +17,7 @@
 
         <x-slot:menu>
             {{-- Theme toggle --}}
-            <x-theme-toggle/>
+            <x-theme-toggle />
         </x-slot:menu>
 
         @if(session('status'))

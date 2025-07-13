@@ -45,7 +45,6 @@
                 placeholder="Tên của bạn"
                 clearable="true"
                 required="true"
-                class="bg-white dark:bg-black"
             />
         </div>
 
@@ -56,7 +55,6 @@
                 placeholder="email@example.com"
                 clearable="true"
                 required="true"
-                class="bg-white dark:bg-black"
             />
         </div>
 
@@ -67,7 +65,6 @@
                 placeholder="Nhập mật khẩu"
                 clearable="true"
                 required="true"
-                class="bg-white dark:bg-black"
             />
         </div>
 
@@ -78,7 +75,6 @@
                 placeholder="Nhập lại mật khẩu"
                 clearable="true"
                 required="true"
-                class="bg-white dark:bg-black"
             />
         </div>
 
